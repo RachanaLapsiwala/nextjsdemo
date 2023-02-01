@@ -1,23 +1,10 @@
 import React, { useState } from 'react'
-import { Button, Grid, Paper } from "@material-ui/core"
-import { makeStyles } from "@material-ui/core/styles";
-const useStyles = makeStyles((theme) => ({
-    root: {
-        "& > *": {
-            margin: theme.spacing(1)
-        },
-    },
-    paperRoot: {
-        backgroundColor: '#FFDBAC',
-        justifyContent: "space-between",
-        border: "1px solid"
-    }
-}))
+import { Button, Grid, Paper } from "@mui/material"
+
 export default function About() {
     const [showContent, setShowContent] = useState(false)
-    const classes = useStyles()
     return (
-        <div className={classes.root}>
+        <div>
             <Button variant="contained" color="primary" onClick={() => setShowContent(!showContent)}>
                 Save
             </Button>
@@ -27,7 +14,6 @@ export default function About() {
                         <Grid container spacing={0.5}>
                             The purpose of Next.js:
                             <Paper
-                                className={classes.paperRoot}
                             >
                                 Next.js is a JavaScript framework for building server-rendered React applications. The purpose of Next.js is to simplify the development of scalable and high-performance React applications.
                                 Some of the key benefits of using Next.js include:
@@ -52,7 +38,6 @@ export default function About() {
                         <Grid container spacing={0.5}>
                             When was first the nextjs released?
                             <Paper
-                                className={classes.paperRoot}
                             >
                                 <hr />
                                 1)Next. js was first released as an open-source project on GitHub on October 25, 2016.
@@ -64,7 +49,6 @@ export default function About() {
                         <Grid container spacing={0.5}>
                             
                             <Paper
-                                className={classes.paperRoot}
                             >
                                 <hr />
                                 Next.js has two forms of pre-rendering: 
